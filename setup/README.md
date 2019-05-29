@@ -114,9 +114,18 @@ For this workshop, we will simulate a basic workflow with two environments:
 
     You should see 5 nodes get created named **manager1**, **manager2**, **manager3**, **worker1** and **worker2**.
 
-2. We will be doing most of our work from the **manager1** node, so select it if it's not selected already.
+2. On the **manager1** node, let's demote and remove one worker.
 
-3. Login to Docker Hub using the `docker login` command and your credentials.
+    ```console
+    $ docker node rm worker2
+    Node worker2 removed from swarm
+    ```
+
+3. Click on the **Create Instance** button to add one more instance. This one is _not_ in our Swarm cluster, which we'll use later. 
+
+4. We will be doing most of our work from the **manager1** node, so select it if it's not selected already.
+
+5. Login to Docker Hub using the `docker login` command and your credentials.
 
     ```console
     $ docker login
@@ -130,12 +139,14 @@ For this workshop, we will simulate a basic workflow with two environments:
     Login Succeeded
     ```
 
+6. Login on **node1** as well (using `docker login`).
+
 
 ### Installing Docker App
 
 To install Docker App, we will download the latest release from GitHub. Once the Docker 19.03 release is made, Docker App will be included in the Docker Desktop installation.
 
-1. All Docker CLI plugins are stored in `~/.docker/cli-plugins`. Let's make that directory first.
+1. Switch back to **manager1**. All Docker CLI plugins are stored in `~/.docker/cli-plugins`. Let's make that directory first.
 
     ```console
     $ mkdir -p ~/.docker/cli-plugins
@@ -174,5 +185,12 @@ To install Docker App, we will download the latest release from GitHub. Once the
     Invocation Base Image: docker/cnab-app-base:v0.8.0-rc1
     ```
 
+6. On the **node1** instance, let's setup Docker App real quick too.
+
+    ```console
+    $ mkdir -p ~/.docker/cli-plugins
+    $ curl -L https://github.com/docker/app/releases/download/v0.8.0-rc1/docker-app-linux.tar.gz | tar zxf -
+    $ mv docker-app-plugin-linux ~/.docker/cli-plugins/docker-app
+    ```
 
 **Congratulations** :clap: You just installed yourself your first Docker CLI plugin! And with that, you are ready to [go on to the first exercise](../exercise1)!

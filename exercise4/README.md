@@ -119,10 +119,18 @@ While doing local development, we don't necessarily need to run multiple replica
 
 Remember that `docker app render` can render a compose file. The Docker Compose command can read a compose file from stdin, so we can pipe the two commands together.
 
-1. On **node1**, spin up the application stack using Docker Compose. Remember to disable the `vote` service when rendering the app.
+1. Push the Docker App so we can use it now.
 
-    ```console
-    $ docker app render -s vote.enabled=false | docker-compose -f - up -d
+    ```bash
+    # Remember to swap out `mikesir87` with your username
+    $ docker app push -t mikesir87/voting-app.dockerapp
+    ```
+
+2. On **node1**, spin up the application stack using Docker Compose. Remember to disable the `vote` service when rendering the app.
+
+    ```bash
+    # Remember to swap out `mikesir87` with your username
+    $ docker app render mikesir87/voting-app.dockerapp -s vote.enabled=false | docker-compose -f - up -d
     ```
 
     The `-f -` flag in the compose command uses the compose file coming from stdin. You should see all but the `vote` service startup.
