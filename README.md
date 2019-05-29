@@ -2,6 +2,10 @@
 
 Welcome to the Docker Application workshop. We prepared for you some exercises to discover and master `docker app` and the Application Package Definition.
 
+## Slides
+
+- [Google Slides](https://docs.google.com/presentation/d/1xEhLhPBbHTOtaRd2FcMwkdCzpqe1WWzjsB87C5k9DK0/edit?usp=sharing)
+
 ## Exercises
 
 * [Setup](setup/README.md): Set up the workshop environment
