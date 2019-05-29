@@ -2,6 +2,8 @@
 
 Welcome to the Docker Application workshop. We prepared for you some exercises to discover and master `docker app` and the Application Package Definition.
 
+> Special thanks to Silvin Lubecki for helping in the development of this workshop. Must of this is based on the [workshop we ran together at DockerCon](https://github.com/silvin-lubecki/docker-app-workshop-dc19).
+
 ## Slides
 
 - [Google Slides](https://docs.google.com/presentation/d/1xEhLhPBbHTOtaRd2FcMwkdCzpqe1WWzjsB87C5k9DK0/edit?usp=sharing)
