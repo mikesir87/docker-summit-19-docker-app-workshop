@@ -121,11 +121,13 @@ For this workshop, we will simulate a basic workflow with two environments:
     Node worker2 removed from swarm
     ```
 
-3. Click on the **Create Instance** button to add one more instance. This one is _not_ in our Swarm cluster, which we'll use later. 
+3. Remove the **worker2** node by selecting it and hitting the "DELETE" button.
 
-4. We will be doing most of our work from the **manager1** node, so select it if it's not selected already.
+4. Click on the **Create Instance** button to add one more instance. This one is _not_ in our Swarm cluster, which we'll use later. 
 
-5. Login to Docker Hub using the `docker login` command and your credentials.
+5. We will be doing most of our work from the **manager1** node, so select it if it's not selected already.
+
+6. Login to Docker Hub using the `docker login` command and your credentials.
 
     ```console
     $ docker login
@@ -139,7 +141,7 @@ For this workshop, we will simulate a basic workflow with two environments:
     Login Succeeded
     ```
 
-6. Login on **node1** as well (using `docker login`).
+7. Login on **node1** as well (using `docker login`).
 
 
 ### Installing Docker App
