@@ -117,7 +117,7 @@ For this workshop, we will simulate a basic workflow with two environments:
 2. On the **manager1** node, let's demote and remove one worker.
 
     ```console
-    $ docker node rm worker2
+    $ docker node rm -f worker2
     Node worker2 removed from swarm
     ```
 
